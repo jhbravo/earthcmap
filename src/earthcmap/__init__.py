@@ -9,3 +9,6 @@ from earthcmap.loader import escmap
 from earthcmap.loader import escmap_list
 from earthcmap.loader import escmap_categories
 from earthcmap.loader import escmap_list_by_category
+
+def hello() -> str:
+    return "Hello from example-lib!"
