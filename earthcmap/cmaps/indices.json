@@ -1,0 +1,74 @@
+{
+    "ndvi_msg": {
+        "name": "ndvi_msg",
+        "long_name": "NDVI for MSG/SEVIRI full disk",
+        "type": "continuous",
+        "units": "K",
+        "N": 61,
+        "data": [[-0.35, "#000000", "-0.35"],
+                 [ -0.3, "#000030",  "-0.3"],
+                 [ -0.2, "#001997",  "-0.2"],
+                 [ -0.1, "#0091fc",  "-0.1"],
+                 [  0.0, "#ffffff",   "0.0"],
+                 [  0.1, "#c6dc87",   "0.1"],
+                 [  0.2, "#84b400",   "0.2"],
+                 [  0.3, "#458c00",   "0.3"],
+                 [  0.4, "#046400",   "0.4"],
+                 [  0.5, "#003c00",   "0.5"],
+                 [  0.6, "#001300",   "0.6"],
+                 [ 0.65, "#000000",  "0.65"]],
+        "source": "Normalized Difference Vegetation Index (NDVI) for MSG/SEVIRI full disk https://www.frontiersin.org/journals/remote-sensing/articles/10.3389/frsen.2021.666516/full"
+    },
+    "ndvi_nesdis": {
+        "name": "ndvi_nesdis",
+        "long_name": "NDVI Greenness Maps",
+        "type": "continuous",
+        "units": "K",
+        "N": 25,
+        "data": [[ 0.0, "#a3a3a3", "0.0 "],
+                 [0.05, "#ddbd6c", "0.05"],
+                 [0.10, "#c59b40", "0.01"],
+                 [0.15, "#ffff55", "0.15"],
+                 [ 0.2, "#dbe49a", "0.2 "],
+                 [ 0.2, "#d2ffd2", "0.2 "],
+                 [ 0.4, "#28ff28", "0.4 "],
+                 [ 0.6, "#00e300", "0.6 "],
+                 [ 0.8, "#007f00", "0.8 "],
+                 [ 1.0, "#001100", "1.0 "]],
+        "source": "https://www.drought.gov/data-maps-tools/ndvi-greenness-maps"
+    },
+    "ndwi_chouari": {
+        "name": "ndwi_chouari",
+        "long_name": "NDWI Enhance Water",
+        "type": "continuous",
+        "units": "K",
+        "N": 20,
+        "data": [[-1.0, "#ffffff", "-1.0"],
+                 [-0.6, "#d8ebdc", "-0.6"],
+                 [-0.3, "#82b887", "-0.3"],
+                 [ 0.0, "#2d8b41", " 0.0"],
+                 [ 0.1, "#22834b", " 0.1"],
+                 [ 0.2, "#2c8e80", " 0.2"],
+                 [ 0.3, "#3598bb", " 0.3"],
+                 [ 0.6, "#3998d8", " 0.6"],
+                 [ 0.8, "#2c72b6", " 0.8"],
+                 [ 1.0, "#292c7b", " 1.0"]],
+        "source": "NDWI adapted from Walid Chouari https://www.researchgate.net/publication/347348896_Contributions_of_multispectral_images_to_the_study_of_land_cover_in_wet_depressions_of_eastern_Tunisia // https://www.researchgate.net/figure/Normalized-Difference-Water-Index-NDWI-applied-to-the-sabkha-Halq-Al-Minjel-A-NDWI_fig4_347348896"
+    }
+}
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Three Sections Layout</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      display: flex;
+      height: 100%;
+    }
+    .section1 {
+      width: 50%;
+      background-color: #f2f2f2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .section1 img {
+      max-width: 700px; /* Constrain image width to 100% of parent */
+      max-height: 700px; /* Constrain image height to 100% of parent */
+      object-fit: contain; /* Maintain aspect ratio, fit within container */
+    }
+    .section2-container {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+    }
+    .section2 {
+      height: 15%;
+      background-color: #d9e3f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .section3 {
+      height: 85%;
+      background-color: #cce5ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #imageContainer {
+            position: relative;
+            display: inline-block;
+        }
+        #imageContainer img {
+            max-width: 100%;
+            height: auto;
+        }
+        #canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        #colorList {
+            list-style-type: none;
+            padding: 0;
+        }
+        #colorList li {
+            padding: 5px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .color-box {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="section1">
+      <!-- <h1>Section 1</h1> -->
+      <!-- <h1>Select Color from Image</h1> -->
+      <ul id="colorList"></ul>
+
+
+    </div>
+    <div class="section2-container">
+      <div class="section2">
+        <!-- <h2>Section 2</h2> -->
+        <!-- <input type="color" id="colorInput" /> -->
+        <input type="color" id="colorInput" name="colorInput" value="#e66465" />
+        <button id="extractColorButton">Extract Color</button>
+      </div>
+      <div class="section3">
+        <!-- <h2>Section 3</h2> -->
+
+      <div id="imageContainer">
+
+        <div class="input-container">
+          <label for="imagePath">New Image Path:</label>
+          <input type="text" id="imagePath" placeholder="Enter new image path"/>
+          <button onclick="updateImage()">Update Image</button>
+        </div>
+        <!-- <img id="image" src="" alt="Image to extract color"/>
+        <canvas id="canvas" ></canvas> -->
+        <br>
+        <!-- <img id="image" src='https://www.faculty.luther.edu/~bernatzr/RainfallRunoff/comet/hydro/basic/Runoff/media/graphics/stills%20of%20swfs/soil_textures_map_1.jpg' alt="Image to extract color" /> -->
+        <!-- <img id="image" src='https://www.mdpi.com/atmosphere/atmosphere-15-01202/article_deploy/html/images/atmosphere-15-01202-g002.png' alt="Image to extract color" /> -->
+        <!-- <img id="image" src='https://cams.nssl.noaa.gov/graphics/models/mpasht_nssl/2025/07/14/1200/f00100/cref_uh075.spc_conus.f00100.png' alt="Image to extract color" /> -->
+        <!-- <img id="image" src='https://ars.els-cdn.com/content/image/1-s2.0-S2212095524001184-gr1_lrg.jpg' alt="Image to extract color" /> -->
+        <img id="image" src='https://upload.wikimedia.org/wikipedia/commons/7/71/Gradient_color_wheel.png' alt="Image to extract color" />
+        
+      </div>
+
+        
+      </div>
+    </div>
+  </div>
+  <script>
+
+    function updateImage() {
+            var newPath = document.getElementById('imagePath').value;
+            var image = document.getElementById('image');
+            image.src = newPath;
+            }
+
+    function hexToRgb(hex) {
+        let r = 0, g = 0, b = 0;
+        if (hex.length === 4) {
+            r = parseInt(hex[1] + hex[1], 16);
+            g = parseInt(hex[2] + hex[2], 16);
+            b = parseInt(hex[3] + hex[3], 16);
+        } else if (hex.length === 7) {
+            r = parseInt(hex[1] + hex[2], 16);
+            g = parseInt(hex[3] + hex[4], 16);
+            b = parseInt(hex[5] + hex[6], 16);
+        }
+        return `rgb(${r}, ${g}, ${b})`;
+    }
+
+    function updateColorList(hexColor) {
+        const colorList = document.getElementById('colorList');
+        const rgbColor = hexToRgb(hexColor);
+        const listItem = document.createElement('li');
+        // listItem.innerHTML = `<span class="color-box" style="background-color: ${hexColor};"></span> ${hexColor} / ${rgbColor}`;
+        listItem.innerHTML = `<span class="color-box" style="background-color: ${hexColor};"></span> ${hexColor}`;
+        colorList.appendChild(listItem);
+    }
+
+    function extractColor() {
+        const colorHex = colorInput.value;
+        const rgbColor = hexToRgb(colorHex);
+
+        const rect = imageInput.getBoundingClientRect();
+        const x = Math.floor(rect.width); // Example position (center)
+        const y = Math.floor(rect.height); // Example position (center)
+
+        const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        const data = imageData.data;
+
+        const index = (y | 0) * canvas.width * 4 + (x | 0) * 4;
+        const r = data[index];
+        const g = data[index + 1];
+        const b = data[index + 2];
+        const a = data[index + 3];
+
+        if (a > 0) { // Ignore fully transparent pixels
+            const extractedHex = `#${((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1).toUpperCase()}`;
+            updateColorList(extractedHex);
+        }
+    }
+
+    extractColorButton.addEventListener('click', extractColor);
+
+    document.getElementById('colorInput').addEventListener('input', function() {
+        updateColorList(this.value);
+    });
+
+</script>
+</body>
+</html>

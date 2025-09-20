@@ -1,0 +1,118 @@
+{
+    "jet": {
+        "name": "jet",
+        "long_name": "",
+        "type": "continuous",
+        "units": "",
+        "N": 64,
+        "data": [[0.0, "#000083", "0.0"],
+                 [0.2, "#003CAA", "0.2"],
+                 [0.4, "#05FFFF", "0.4"],
+                 [0.6, "#FFFF00", "0.6"],
+                 [0.8, "#FA0000", "0.8"],
+                 [1.0, "#800000", "1.0"]],
+        "source": ""
+    },
+    "hsv": {
+        "name": "hsv",
+        "long_name": "",
+        "type": "continuous",
+        "units": "",
+        "N": 64,
+        "data": [[  0.0, "#ff0000", "  0.0"],
+                 [0.167, "#fdff02", "0.167"],                 
+                 [0.333, "#00fc04", "0.333"],                 
+                 [  0.5, "#01f9ff", "  0.5"],                 
+                 [0.667, "#0200fd", "0.667"],                 
+                 [0.833, "#ff00fb", "0.833"],                 
+                 [  1.0, "#ff0006", "  1.0"]],
+        "source": ""
+    },
+    "hot": {
+        "name": "hot",
+        "long_name": "",
+        "type": "continuous",
+        "units": "",
+        "N": 64,
+        "data": [[  0.0, "#000000",   "0.0"],
+                 [0.333, "#e60000", "0.333"],
+                 [0.667, "#ffd200", "0.667"],
+                 [  1.0, "#ffffff",   "1.0"]],
+        "source": ""
+    },
+    "cool": {
+        "name": "cool",
+        "long_name": "",
+        "type": "continuous",
+        "units": "",
+        "N": 64,
+        "data": [[0, "#00ffff", "0"],
+                 [1, "#ff00ff", "1"]],
+        "source": ""
+    },
+    "spring": {
+        "name": "spring",
+        "long_name": "",
+        "type": "continuous",
+        "units": "",
+        "N": 64,
+        "data": [[0, "#ff00ff", "0"],
+                 [1, "#ffff00", "1"]],
+        "source": ""
+    },
+    "bgr": {
+        "name": "bgr",
+        "long_name": "",
+        "type": "continuous",
+        "units": "",
+        "N": 64,
+        "data": [[  0.0, "#3b4fc0", "0.0"],                 
+                 [  0.5, "#dddddd", "0.5"],                 
+                 [  1.0, "#b40426", "1.0"]],
+        "source": "https://www.kennethmoreland.com/color-maps/"
+    },
+    "pgo": {
+        "name": "pgo",
+        "long_name": "",
+        "type": "continuous",
+        "units": "",
+        "N": 64,
+        "data": [[  0.0, "#6f4fa1", "0.0"],                 
+                 [  0.5, "#dddddd", "0.5"],                 
+                 [  1.0, "#c2550c", "1.0"]],
+        "source": "https://www.kennethmoreland.com/color-maps/"
+    },
+    "ggp": {
+        "name": "ggp",
+        "long_name": "",
+        "type": "continuous",
+        "units": "",
+        "N": 64,
+        "data": [[  0.0, "#168833", "0.0"],                 
+                 [  0.5, "#dddddd", "0.5"],                 
+                 [  1.0, "#6f4fa1", "1.0"]],
+        "source": "https://www.kennethmoreland.com/color-maps/"
+    },
+    "bgt": {
+        "name": "bgt",
+        "long_name": "",
+        "type": "continuous",
+        "units": "",
+        "N": 64,
+        "data": [[  0.0, "#3786e8", "0.0"],                 
+                 [  0.5, "#dddddd", "0.5"],                 
+                 [  1.0, "#ad7d18", "1.0"]],
+        "source": "https://www.kennethmoreland.com/color-maps/"
+    },
+    "ggr": {
+        "name": "ggr",
+        "long_name": "",
+        "type": "continuous",
+        "units": "",
+        "N": 64,
+        "data": [[  0.0, "#168833", "0.0"],                 
+                 [  0.5, "#dddddd", "0.5"],                 
+                 [  1.0, "#c1373b", "1.0"]],
+        "source": "https://www.kennethmoreland.com/color-maps/"
+    }
+}
