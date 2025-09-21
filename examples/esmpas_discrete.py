@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 
 from earthcmap import escmap
 
-def escmap_discrete(cmap_name = None):
+def escmap_discrete(cmap_name = None, units=None):
     if cmap_name == None:
         cmap_name = "soil_usda"
          
@@ -31,7 +31,7 @@ def escmap_discrete(cmap_name = None):
     cbar.set_ticks(cmap.midpositions)
     cbar.set_ticklabels(cmap.midlabels, size=8)
     
-    plt.savefig(f"C:/Users/Ismart/earthcmap/joss/images/{cmap_name}.png", bbox_inches='tight') #uncomment to save figure
+    # plt.savefig(f"C:/Users/Ismart/earthcmap/joss/images/{cmap_name}.png", bbox_inches='tight') #uncomment to save figure
 
 # escmap_discrete()
 escmap_discrete(cmap_name = "chirps")

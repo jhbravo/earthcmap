@@ -120,13 +120,26 @@ def newmaxmin(old_val, old_max, old_min):
     new_val = (old_val - old_min) / (old_max - old_min)
     return round(new_val, 2)
 
-def escmap(cmap_name, extend='neither'):
+def convert_units(values, old_units, new_units):
+    if old_units == "C" and new_units == "K":
+        values = [round(x + 273.15, 2) for x in values]
+    elif old_units == "K" and new_units == "C":
+        values = [round(x - 273.15, 2) for x in values]
+    elif old_units == "C" and new_units == "W m^{-2}":
+        values = [round(5.6693E-8*((x + 273.15)**4), 2) for x in values]
+    elif old_units == "in" and new_units == "mm":
+        values = [round(x * 25.4, 2) for x in values]
+    elif old_units == "mm" and new_units == "in":
+        values = [round(x / 25.4, 2) for x in values]
+    return values
+
+def escmap(cmap_name, units=None):
     """
     Returns a cmap and norm for a registered colormap name.
     
     Parameters:
         name (str): Name of the predefined colormap ('cmap_name1', etc.).
-        extend (str): How to handle values beyond the range ('neither', 'min', 'max', 'both').
+        unist (str): Reconfigure based on changing the values if the unist are differents.
         
     Returns:
         cmap (ListedColormap), norm (BoundaryNorm)
@@ -134,12 +147,19 @@ def escmap(cmap_name, extend='neither'):
     # cmap_name = "prec01"
     entry = get_cmap_name(cmap_name)
     
+    
     cmaptype = entry["type"]
     
     values = [x[0] for x in entry['data']]
     colors = [x[1] for x in entry['data']]
     labels = [x[2] for x in entry['data']]
     
+    if units == None or units == entry["units"]:
+        out_units = entry["units"]
+    elif units != entry["units"]:
+        values = convert_units(values, entry["units"], units)
+        out_units = units
+            
     v_min = min(values)
     v_max = max(values)
     
@@ -164,14 +184,12 @@ def escmap(cmap_name, extend='neither'):
         cmap = LinearSegmentedColormap.from_list(cmap_name, merged_colors, N = nval)
         norm = Normalize(vmin = v_min, vmax = v_max, clip = False)
         
-    cmap.units = entry["units"]
+    cmap.units = out_units
     cmap.long_name = entry["long_name"]
     cmap.positions = values
     cmap.labels = labels
     
     return cmap, norm
-
-
 
 
 
