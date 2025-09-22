@@ -110,7 +110,7 @@ cbar.set_ticklabels(cmap.labels)
 ```
 
 # Real data examples
-Figures 5 and 6 ilustrate the use of the escmap library to visualize output from the MPAS model over New York City and its surrounding regions. By applying standardized colormaps, the data becomes immediately more interpretable. Regardless of changes in the model domain or the use of other datasets, as long as the variables being visualized are equivalent, they will be rendered consistently using the same colormap parameters.
+Figures 5 and 6 ilustrate the use of the escmap library to visualize output from the Model for Prediction Across Scales (MPAS) over New York City and its surrounding regions. By applying standardized colormaps, the data becomes immediately more interpretable. Regardless of changes in the model domain or the use of other datasets, as long as the variables being visualized are equivalent, they will be rendered consistently using the same colormap parameters.
 Figure 5 showcases colormaps from the `land` category, while Figure 6 includes examples from the `['earthobs', 'precipitation', 'temperature']` categories.
 
 # Benefits
