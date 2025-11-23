@@ -161,5 +161,48 @@
         "data": [[ 0, "#31359b", "water"],
                  [ 1, "#00bf8b", "land"]],
         "source": ""
+    },
+    "mcd12q1": {
+        "name":"mcd12q1",
+        "long_name": "MODIS Land Cover Type Product",
+        "type" : "discrete",
+        "units": "-",
+        "data": [[ 1,"#18613f", "Evergreen Needleleaf"], 
+                 [ 2,"#4e9721", "Evergreen Broadleaf" ], 
+                 [ 3,"#2da06c", "Deciduous Needleleaf"], 
+                 [ 4,"#64be2e", "Deciduous Broadleaf" ], 
+                 [ 5,"#89c860", "Mixed Forest"        ], 
+                 [ 6,"#298389", "Closed Shrublands"   ], 
+                 [ 7,"#7ac3ca", "Open Shrublands"     ], 
+                 [ 8,"#9b9b15", "Woody Savannas"      ], 
+                 [ 9,"#f9f656", "Savannas"            ], 
+                 [10,"#eec54a", "Grasslands"          ], 
+                 [11,"#a296c5", "Permanent Wetlands"  ], 
+                 [12,"#b86e14", "Croplands"           ], 
+                 [13,"#861014", "Urban and Built-up"  ], 
+                 [14,"#e58b1d", "Natulat Vegetation Mosaic" ], 
+                 [15,"#7888c1", "Snow and Ice"        ], 
+                 [16,"#aa89b9", "Barren or sparsely vegetated" ], 
+                 [17,"#656565", "Water Bodies"        ]],
+        "source": "https://www.mdpi.com/2072-4292/16/16/2874"
     }
 }
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

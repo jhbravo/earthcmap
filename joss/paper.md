@@ -34,7 +34,7 @@ Given Python's popularity and the importance of selecting appropriate colormaps,
 
 This project aims to standardize the use of colormaps across disciplines such as meteorology, oceanography, and remote sensing among others by offering a curated library of the most commonly used colormaps from high-impact institutions and agencies (e.g., NOAA, NASA, ECMWF).
 
-# The library: ESCMAP
+# ESCMAP
 
 The ESCMAP package offers a curated collection of colormaps specifically designed for Earth sciences, as illustrated in Figure 1. Built in Python and relying solely on matplotlib [@hunter_matplotlib_2007,] as its only dependency, the library is lightweight and easy to integrate. It is intended to complement other scientific libraries by providing appropriate colormaps along with their corresponding normalization settings. The goal is to streamline the visualization process for researchers, reducing the time spent selecting or customizing colormaps, while promoting consistency and accuracy in the presentation of Earth science data.
 

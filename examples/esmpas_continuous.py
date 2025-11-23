@@ -31,7 +31,7 @@ def escmap_discrete(cmap_name = None):
     cbar.set_ticks(cmap.positions)
     cbar.set_ticklabels(cmap.labels)
     
-    plt.savefig(f"/joss/images/{cmap_name}.png", bbox_inches='tight')
+    # plt.savefig(f"/joss/images/{cmap_name}.png", bbox_inches='tight')
 
 # escmap_discrete()
 escmap_discrete(cmap_name = "ndvi_msg")

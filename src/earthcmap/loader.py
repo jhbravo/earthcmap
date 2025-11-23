@@ -120,18 +120,59 @@ def newmaxmin(old_val, old_max, old_min):
     new_val = (old_val - old_min) / (old_max - old_min)
     return round(new_val, 2)
 
+# def convert_units(values, old_units, new_units):
+#     # Normalize input
+#     old_units = old_units.strip().lower()
+#     new_units = new_units.strip().lower()
+
+#     # Return unchanged if units are the same
+#     if old_units == new_units:
+#         return values
+
+#     # Define conversion functions
+#     def c_to_k(x): return round(x + 273.15, 2)
+#     def k_to_c(x): return round(x - 273.15, 2)
+#     def c_to_wm2(x): return round(5.6693E-8 * ((x + 273.15) ** 4), 2)
+#     def in_to_mm(x): return round(x * 25.4, 2)
+#     def mm_to_in(x): return round(x / 25.4, 2)
+
+#     # Mapping of unit conversions
+#     conversion_map = {
+#         ("c", "k"): c_to_k,
+#         ("k", "c"): k_to_c,
+#         ("c", "w m^{-2}"): c_to_wm2,
+#         ("in", "mm"): in_to_mm,
+#         ("mm", "in"): mm_to_in,
+#     }
+
+#     key = (old_units, new_units)
+
+#     if key not in conversion_map:
+#         raise ValueError(f"Unsupported conversion: {old_units} → {new_units}")
+
+#     func = conversion_map[key]
+#     return [func(x) for x in values]
+
 def convert_units(values, old_units, new_units):
-    if old_units == "C" and new_units == "K":
-        values = [round(x + 273.15, 2) for x in values]
-    elif old_units == "K" and new_units == "C":
-        values = [round(x - 273.15, 2) for x in values]
-    elif old_units == "C" and new_units == "W m^{-2}":
-        values = [round(5.6693E-8*((x + 273.15)**4), 2) for x in values]
-    elif old_units == "in" and new_units == "mm":
-        values = [round(x * 25.4, 2) for x in values]
-    elif old_units == "mm" and new_units == "in":
-        values = [round(x / 25.4, 2) for x in values]
-    return values
+    if old_units == new_units:
+        return values
+    else:
+        if old_units == "C" and new_units == "K":
+            values = [round(x + 273.15, 2) for x in values]
+        elif old_units == "K" and new_units == "C":
+            values = [round(x - 273.15, 2) for x in values]
+        elif old_units == "C" and new_units == "W m^{-2}":
+            values = [round(5.6693E-8*((x + 273.15)**4), 2) for x in values]
+        elif old_units == "in" and new_units == "mm":
+            values = [round(x * 25.4, 2) for x in values]
+        elif old_units == "mm" and new_units == "in":
+            values = [round(x / 25.4, 2) for x in values]
+        elif old_units == "m s^{-1}" and new_units == "Kt":
+            values = [round(x / 0.514444, 2) for x in values]    
+        elif old_units == "Kt" and new_units == "m s^{-1}":
+            values = [round(x * 0.514444, 2) for x in values]    
+        return values
+    
 
 def escmap(cmap_name, units=None):
     """
@@ -146,7 +187,6 @@ def escmap(cmap_name, units=None):
     """
     # cmap_name = "prec01"
     entry = get_cmap_name(cmap_name)
-    
     
     cmaptype = entry["type"]
     
