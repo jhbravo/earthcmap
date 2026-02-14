@@ -167,7 +167,7 @@ def convert_units(values, old_units, new_units):
             values = [round(x * 25.4, 2) for x in values]
         elif old_units == "mm" and new_units == "in":
             values = [round(x / 25.4, 2) for x in values]
-        elif old_units == "m s^{-1}" and new_units == "Kt":
+        elif old_units in ["m s^{-1}","m s-1"] and new_units == "Kt":
             values = [round(x / 0.514444, 2) for x in values]    
         elif old_units == "Kt" and new_units == "m s^{-1}":
             values = [round(x * 0.514444, 2) for x in values]    

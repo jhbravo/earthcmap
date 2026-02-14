@@ -34,9 +34,11 @@ Given Python's popularity and the importance of selecting appropriate colormaps,
 
 This project aims to standardize the use of colormaps across disciplines such as meteorology, oceanography, and remote sensing among others by offering a curated library of the most commonly used colormaps from high-impact institutions and agencies (e.g., NOAA, NASA, ECMWF).
 
+This is important because adopting well-established colormaps preserves continuity in how information is interpreted. Even small changes in color design can break users’ visual expectations, obscure patterns they are accustomed to recognizing, or undermine trust in the data. By aligning with widely used and widely learned color conventions, the project helps maintain a shared visual language that supports clarity, consistency, and reliable interpretation across applications [@datavist_colour_2025].
+
 # ESCMAP
 
-The ESCMAP package offers a curated collection of colormaps specifically designed for Earth sciences, as illustrated in Figure 1. Built in Python and relying solely on matplotlib [@hunter_matplotlib_2007,] as its only dependency, the library is lightweight and easy to integrate. It is intended to complement other scientific libraries by providing appropriate colormaps along with their corresponding normalization settings. The goal is to streamline the visualization process for researchers, reducing the time spent selecting or customizing colormaps, while promoting consistency and accuracy in the presentation of Earth science data.
+The ESCMAP package offers a curated collection of colormaps specifically designed for Earth sciences, as illustrated in Figure 1. Built in Python and relying solely on matplotlib [@hunter_matplotlib_2007] as its only dependency, the library is lightweight and easy to integrate. It is intended to complement other scientific libraries by providing appropriate colormaps along with their corresponding normalization settings. The goal is to streamline the visualization process for researchers, reducing the time spent selecting or customizing colormaps, while promoting consistency and accuracy in the presentation of Earth science data.
 
 Each colormap in the library is:
 * Inspired by real-world usage, based on high-impact institutions or research publications.
@@ -110,8 +112,8 @@ cbar.set_ticklabels(cmap.labels)
 ```
 
 # Real data examples
-Figures 5 and 6 ilustrate the use of the escmap library to visualize output from the Model for Prediction Across Scales (MPAS) over New York City and its surrounding regions. By applying standardized colormaps, the data becomes immediately more interpretable. Regardless of changes in the model domain or the use of other datasets, as long as the variables being visualized are equivalent, they will be rendered consistently using the same colormap parameters.
-Figure 5 showcases colormaps from the `land` category, while Figure 6 includes examples from the `['earthobs', 'precipitation', 'temperature']` categories.
+
+As a practical use case, we employ data from the Model for Prediction Across Scales–Atmosphere (MPAS-A). Figures 5 and 6 demonstrate the use of escmap, in combination with the MPAS-Viewer library, to efficiently visualize MPAS-A data [@mendez_mpas-viewer_2026] over New York Metropolitan Area City and its surrounding regions. The application of standardized colormaps makes the data immediately more interpretable. Furthermore, regardless of changes in the model domain or the use of different datasets, equivalent variables are rendered consistently using the same colormap parameters, ensuring visual consistency and comparability. Figure 5 showcases colormaps from the `land` categories, while Figure 6 includes examples from the `precipitation` and  `temperature` categories.
 
 # Benefits
 

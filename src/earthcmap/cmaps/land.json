@@ -185,10 +185,38 @@
                  [16,"#aa89b9", "Barren or sparsely vegetated" ], 
                  [17,"#656565", "Water Bodies"        ]],
         "source": "https://www.mdpi.com/2072-4292/16/16/2874"
-    }
+    },
+    "modis_igbp": {
+        "name":"modis_igbp",
+        "long_name": "Land Use Categorie",
+        "type" : "discrete",
+        "units": "-",
+        "data": [[ 0,"#ffffff", "Empty"        ], 
+                 [ 1,"#195d0e", "Evergreen Needleleaf Forest"        ], 
+                 [ 2,"#2f8e21", "Evergreen Broadleaf Forest"         ], 
+                 [ 3,"#48ce36", "Deciduous Needleleaf Forest"        ], 
+                 [ 4,"#1f7e0a", "Deciduous Broadleaf Forest"         ], 
+                 [ 5,"#4db075", "Mixed Forest"                       ], 
+                 [ 6,"#b9b86d", "Closed Shrublands"                  ], 
+                 [ 7,"#ece890", "Open Shrublands"                    ], 
+                 [ 8,"#7a8110", "Woody Savannas"                     ], 
+                 [ 9,"#b9c01d", "Savannas"                           ], 
+                 [10,"#9aeb93", "Grasslands"                         ], 
+                 [11,"#55f8fe", "Permanent Wetlands"                 ], 
+                 [12,"#f0ff2a", "Croplands"                          ], 
+                 [13,"#f1261a", "Urban and Built-Up"                 ], 
+                 [14,"#f6db24", "Cropland/Natural Vegetation Mosaics"], 
+                 [15,"#fffff8", "Snow and Ice"                       ], 
+                 [16,"#efe0b5", "Barren or Sparsely Vegetated"       ], 
+                 [17,"#3000fb", "Water"                              ], 
+                 [18,"#b5eced", "Wooded Tundra"                      ], 
+                 [19,"#e5fdff", "Mixed Tundra"                       ], 
+                 [20,"#e6e5fd", "Barren Tundra"                      ], 
+                 [21,"#808080", "Low Intensity Residential"          ]],
+        "source": "https://www.linkedin.com/embed/feed/update/urn:li:share:7416489487356030976"
+        }
 }
 
-
  
  
  
@@ -206,3 +234,9 @@
  
  
  
+ 
+ 
+ 
+ 
+ 
+// 

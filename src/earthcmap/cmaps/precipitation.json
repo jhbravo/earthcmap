@@ -267,7 +267,7 @@
     },
     "mrms_cref": {
         "name": "mrms_cref",
-        "long_name": "Composite Refelectivity ",
+        "long_name": "Composite Refelectivity",
         "type" : "discrete",
         "units": "dBZ",
         "data": [[-35, "#ddfeff", "-35"],
@@ -312,5 +312,27 @@
                  [ 70, "#b688d8",  "0.6"],
                  [ 75, "#784ca2", "0.75"]],
         "source": "https://cbwofs.nssl.noaa.gov/Forecast?product=comp_dz__member&sector=wofs"
+    },
+    "bom_au": {
+        "name": "bom_au",
+        "long_name": "Rain reflectivity",
+        "type" : "discrete",
+        "units": "dBZ",
+        "data": [[12, "#f5f5ff", "12"],
+                 [23, "#b4b4ff", "23"],
+                 [28, "#7a7aff", "28"],
+                 [31, "#1414ff", "31"],
+                 [34, "#00d8c3", "34"],
+                 [37, "#009690", "37"],
+                 [40, "#006666", "40"],
+                 [43, "#ffff00", "43"],
+                 [46, "#ffc800", "46"],
+                 [49, "#ff9600", "49"],
+                 [52, "#ff6400", "52"],
+                 [55, "#ff0000", "55"],
+                 [58, "#c80000", "58"],
+                 [61, "#780000", "61"],
+                 [64, "#280000", "64"]],
+        "source": "https://www.bom.gov.au/weather-and-climate/rain-radar-and-weather-maps"
     }
 }
