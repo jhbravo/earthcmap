@@ -1,6 +1,6 @@
 {
-    "ter": {
-        "name":"ter",
+    "terrain": {
+        "name":"terrain",
         "long_name": "Terrain Height",
         "type" : "continuous",
         "units": "m",
