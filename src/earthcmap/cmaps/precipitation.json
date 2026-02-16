@@ -298,7 +298,7 @@
         "name": "wofs_radar",
         "long_name": "WoFS Composite Reflectivity",
         "type" : "discrete",
-        "units": "in",
+        "units": "dBZ",
         "data": [[ 20, "#65fe52",    "0"],
                  [ 25, "#5dd750", "0.01"],
                  [ 30, "#57b04f", "0.03"],
