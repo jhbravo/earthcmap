@@ -152,7 +152,7 @@
                  [22,"#e54a17", "High Intensity Residential"         ], 
                  [23,"#ac2d25", "Industrial or Commercial"           ]],
         "source": "https://www.sciencedirect.com/science/article/pii/S2212095524001184"
-        },
+    },
     "laoc": {
         "name":"laoc",
         "long_name": "Land - Ocean",
@@ -188,7 +188,7 @@
     },
     "modis_igbp": {
         "name":"modis_igbp",
-        "long_name": "Land Use Categorie",
+        "long_name": "21 MODIS IGBP",
         "type" : "discrete",
         "units": "-",
         "data": [[ 0,"#ffffff", "Empty"        ], 
@@ -214,29 +214,5 @@
                  [20,"#e6e5fd", "Barren Tundra"                      ], 
                  [21,"#808080", "Low Intensity Residential"          ]],
         "source": "https://www.linkedin.com/embed/feed/update/urn:li:share:7416489487356030976"
-        }
+    }
 }
-
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-// 
