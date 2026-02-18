@@ -109,10 +109,64 @@
                  [ 48, "#e5cce5ff", " 48"],
                  [ 52, "#e5e5e5ff", " 52"]],
         "source": "https://charts.ecmwf.int/products/medium-2mt-wind30"
+    },
+    "temp_wofs": {
+        "name": "temp_wofs",
+        "long_name": "WoFS 2m temperature",
+        "type" : "discrete",
+        "units": "F",
+        "data": [[ 16, "#b2b2b2", " 16"],
+                 [ 18, "#bfbfbf", " 18"],
+                 [ 20, "#d0d0d0", " 20"],
+                 [ 22, "#dfdfdf", " 22"],
+                 [ 24, "#eaeaf4", " 24"],
+                 [ 26, "#cac8e0", " 26"],
+                 [ 28, "#ad9fcb", " 28"],
+                 [ 30, "#a188c0", " 30"],
+                 [ 32, "#7b8cac", " 32"],
+                 [ 36, "#7c95ba", " 36"],
+                 [ 40, "#7d9ec7", " 40"],
+                 [ 45, "#8cb0d5", " 45"],
+                 [ 50, "#9dc2de", " 50"],
+                 [ 55, "#cce0ee", " 55"],
+                 [ 60, "#edf4fa", " 60"],
+                 [ 65, "#9bcfa7", " 65"],
+                 [ 70, "#cdeac9", " 70"],
+                 [ 75, "#f1f9ee", " 75"],
+                 [ 80, "#fdf1e4", " 80"],
+                 [ 85, "#f9d3af", " 85"],
+                 [ 90, "#f6af9c", " 90"],
+                 [ 95, "#db8384", " 95"],
+                 [100, "#ad9fcb", "100"],
+                 [105, "#cac8e0", "105"]],
+        "source": "https://cbwofs.nssl.noaa.gov/Forecast?product=t_2__ens_mean&sector=wofs"
     }
 }
 
 
 
-
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
