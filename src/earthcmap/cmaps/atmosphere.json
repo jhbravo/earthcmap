@@ -153,5 +153,30 @@
                  [  75, "#7f0000","  75"],
                  [ 100, "#4c0000"," 100"]],
         "source": "https://charts.ecmwf.int/products/medium-rv-div-uv"
+    },
+    "smoke": {
+        "name": "smoke",
+        "long_name": "SMOKE",
+        "type" : "discrete",
+        "units": "ug m^{-3}",
+        "data": [[  0, "#ffffff","  0"],
+                 [  1, "#d2e1f2","  1"],
+                 [  2, "#9ac3de","  2"],
+                 [  4, "#5997c8","  4"],
+                 [  6, "#2f63aa","  6"],
+                 [  8, "#278347","  8"],
+                 [ 12, "#5eb361"," 12"],
+                 [ 16, "#a5d76d"," 16"],
+                 [ 20, "#fdf7b2"," 20"],
+                 [ 25, "#f5ac63"," 25"],
+                 [ 30, "#ef8853"," 30"],
+                 [ 40, "#e46541"," 40"],
+                 [ 60, "#ba292c"," 60"],
+                 [100, "#9e1529","100"],
+                 [200, "#9903f8","200"]],
+        "source": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/"
     }
 }
+
+ 
+ 
