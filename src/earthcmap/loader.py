@@ -163,8 +163,12 @@ def convert_units(values, old_units, new_units):
             values = [round(x - 273.15, 2) for x in values]
         elif old_units == "C" and new_units == "F":
             values = [(round(x, 2) * 9/5) + 32 for x in values]
+        elif old_units == "K" and new_units == "F":
+            values = [((round(x, 2) - 273.15) * 9/5) + 32 for x in values]
         elif old_units == "F" and new_units == "C":
             values = [(round(x, 2) - 32) * 5/9 for x in values]
+        elif old_units == "F" and new_units == "K":
+            values = [((round(x, 2) - 32) * 5/9) + 273.15 for x in values]
         elif old_units == "C" and new_units == "W m^{-2}":
             values = [round(5.6693E-8*((x + 273.15)**4), 2) for x in values]
         elif old_units == "K" and new_units == "W m^{-2}":
