@@ -175,8 +175,26 @@
                  [100, "#9e1529","100"],
                  [200, "#9903f8","200"]],
         "source": "https://rapidrefresh.noaa.gov/hrrr/HRRRsmoke/"
+    },
+    "PM2p5_ca": {
+        "name": "PM2p5_ca",
+        "long_name": "Total Fine Particulate Matter PM2.5",
+        "type" : "discrete",
+        "units": "ug m^{-3}",
+        "data": [[  0, "#ffffff","  0"],
+                 [  1, "#accee3","  1"],
+                 [  2, "#67b4e8"," 10"],
+                 [  4, "#427eb8"," 20"],
+                 [  6, "#b6df8d"," 30"],
+                 [  8, "#56b04b"," 40"],
+                 [ 12, "#278081"," 50"],
+                 [ 16, "#fcff40"," 60"],
+                 [ 20, "#f6851c"," 70"],
+                 [ 25, "#db2920"," 80"],
+                 [ 30, "#f185c0"," 90"],
+                 [ 40, "#f820fe","100"],
+                 [ 60, "#964ea4","250"],
+                 [100, "#63029b","500"]],
+        "source": "https://weather.gc.ca/firework/firework_anim_e.html?type=pt&utc=12"
     }
 }
-
- 
- 
