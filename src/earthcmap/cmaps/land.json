@@ -214,5 +214,22 @@
                  [20,"#e6e5fd", "Barren Tundra"                      ], 
                  [21,"#808080", "Low Intensity Residential"          ]],
         "source": "https://www.linkedin.com/embed/feed/update/urn:li:share:7416489487356030976"
+    },
+    "sfc_albedo": {
+        "name":"sfc_albedo",
+        "long_name": "CLARA-SALblack-sky surface albedo",
+        "type" : "continuous",
+        "units": "-",
+        "N": 100,
+        "data": [[   0,"#ceced0", "   0" ], 
+                 [0.01,"#0103f6", "0.01" ], 
+                 [0.08,"#0103f6", "0.08" ], 
+                 [0.09,"#095e05", "0.09" ], 
+                 [0.18,"#07b605", "0.18" ], 
+                 [0.22,"#816336", "0.22" ], 
+                 [0.48,"#ffff00", "0.48" ], 
+                 [0.75,"#ff0004", "0.75" ], 
+                 [ 1.0,"#760306", " 1.0" ]],
+        "source": "https://www.researchgate.net/publication/236142524_CLARA-SAL_A_global_28_yr_timeseries_of_Earth%27s_black-sky_surface_albedo"
     }
 }
